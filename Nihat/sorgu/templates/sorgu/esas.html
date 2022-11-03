@@ -1,0 +1,12 @@
+{% if sual_list %}
+    <ul>
+    {% for sual in sual_list %}
+        <li><a href="/sorgu/{{ sual.id }}/">{{ sual.sual_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Hec bir sorgu yoxdur !</p>
+{% endif %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'sorgu/style.css' %}">
